@@ -7,10 +7,9 @@ public class ExampleAsync {
                 .thenRun(() -> engine.setOption("MultiPV", 2))
                 .thenRun(engine::uciNewGame)
                 .thenCompose(aVoid -> engine.isReadyAsync())
-                .thenAcceptAsync(aVoid -> engine.startPos("e2e4", "e7e5"))
+                .thenRun(() -> engine.startPos("e2e4", "e7e5"))
                 .thenCompose(aVoid -> engine.goMovetimeAsync(100))
                 .thenAccept(System.out::println); //CalculationResult(bestmove=g1f3, ponder=b8c6)
-
 
         Thread.sleep(1000);
     }
