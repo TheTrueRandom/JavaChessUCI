@@ -1,7 +1,9 @@
 # Java Chess UCI API (JUCI)
 
 Synchronous and asynchronous Java API for the chess UCI interface.
-For full functionality overview have a look at [IUCIEngine](src/main/java/IUCIEngine).
+For full functionality overview have a look at [IUCIEngine](src/main/java/IUCIEngine.java).
+
+
 Every method which is waiting for a result from the engine can be executed
 synchronously (e.g. `goMovetime(int movetime)`) - blocking the current thread until the operation is finished -
 or asynchronously (`goMovetimeAsync(int movetime)`) - returning a [Future](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html) which will complete once the operation is finished.
