@@ -1,7 +1,7 @@
 # Java Chess UCI API (JUCI)
 
 Synchronous and asynchronous Java API for the chess UCI interface.
-For full functionality overview have a look at [IUCIEngine](src/main/java/IUCIEngine.java).
+For full functionality overview have a look at [the interface](src/main/java/IUCIEngine.java).
 
 
 Every method which is waiting for a result from the engine can be executed
