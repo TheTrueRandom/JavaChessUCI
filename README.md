@@ -1,4 +1,4 @@
-# Java Chess UCI API (JUCI)
+# Java Chess UCI API (JUCI) [![Build Status](https://travis-ci.org/TheTrueRandom/JavaChessUCI.svg?branch=master)](https://travis-ci.org/TheTrueRandom/JavaChessUCI)
 
 Synchronous and asynchronous Java API for the chess UCI interface.
 For full functionality overview have a look at [the interface](src/main/java/IUCIEngine.java).
