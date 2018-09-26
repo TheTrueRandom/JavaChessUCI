@@ -27,7 +27,7 @@ class EngineTest {
 
     @BeforeAll
     static void init() {
-        EXECUTABLE = EngineTest.class.getResource("stockfish-9-64").getFile();
+        EXECUTABLE = EngineTest.class.getResource("stockfish_8_x64").getFile();
         new File(EXECUTABLE).setExecutable(true);
     }
 
