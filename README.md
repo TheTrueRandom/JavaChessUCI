@@ -22,7 +22,7 @@ or asynchronously (e.g. `goMovetimeAsync(int movetime)`) - returning a [Future](
 <dependency>
     <groupId>com.github.TheTrueRandom</groupId>
     <artifactId>JavaChessUCI</artifactId>
-    <version>master-SNAPSHOT</version>
+    <version>master</version>
 </dependency>
 ```
 ### Gradle
@@ -34,7 +34,7 @@ repositories {
 
 ```
 dependencies {
-    implementation 'com.github.TheTrueRandom:JavaChessUCI:master-SNAPSHOT'
+    implementation 'com.github.TheTrueRandom:JavaChessUCI:master'
 }
 ```
 ## Usage
