@@ -1,4 +1,4 @@
-# Java Chess UCI API [![Build Status](https://travis-ci.org/TheTrueRandom/JavaChessUCI.svg?branch=master)](https://travis-ci.org/TheTrueRandom/JavaChessUCI) [![](https://jitpack.io/v/TheTrueRandom/JavaChessUCI.svg)](https://jitpack.io/#TheTrueRandom/JavaChessUCI)
+# Java Chess UCI API [![Build Status](https://travis-ci.org/TheTrueRandom/JavaChessUCI.svg?branch=master)](https://travis-ci.org/TheTrueRandom/JavaChessUCI) [![](https://jitpack.io/v/TheTrueRandom/JavaChessUCI.svg)](https://jitpack.io/#TheTrueRandom/JavaChessUCI/master)
 
 
 Synchronous and asynchronous Java API for the chess UCI interface.
