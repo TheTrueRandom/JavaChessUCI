@@ -1,4 +1,4 @@
-# Java Chess UCI API [![Build Status](https://travis-ci.org/TheTrueRandom/JavaChessUCI.svg?branch=master)](https://travis-ci.org/TheTrueRandom/JavaChessUCI) [![](https://jitpack.io/v/TheTrueRandom/JavaChessUCI.svg)](https://jitpack.io/#TheTrueRandom/JavaChessUCI/master) [![codecov](https://codecov.io/gh/TheTrueRandom/JavaChessUCI/branch/master/graph/badge.svg)](https://codecov.io/gh/TheTrueRandom/JavaChessUCI)
+# Java Chess UCI API [![Build Status](https://travis-ci.org/TheTrueRandom/JavaChessUCI.svg?branch=master)](https://travis-ci.org/TheTrueRandom/JavaChessUCI) [![](https://jitpack.io/v/TheTrueRandom/JavaChessUCI.svg)](https://jitpack.io/#TheTrueRandom/JavaChessUCI/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f76fb8175fd04e89960fbcf54352f7ee)](https://app.codacy.com/app/TheTrueRandom/JavaChessUCI?utm_source=github.com&utm_medium=referral&utm_content=TheTrueRandom/JavaChessUCI&utm_campaign=Badge_Grade_Dashboard) [![codecov](https://codecov.io/gh/TheTrueRandom/JavaChessUCI/branch/master/graph/badge.svg)](https://codecov.io/gh/TheTrueRandom/JavaChessUCI)
 
 
 
