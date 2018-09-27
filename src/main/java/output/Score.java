@@ -13,7 +13,7 @@ public class Score {
      * null if not available
      */
     @EngineToGUI("cp")
-    Integer cp;
+    private Integer cp;
 
     /**
      * Mate in moves (not plies).
@@ -21,21 +21,21 @@ public class Score {
      * null if not available
      */
     @EngineToGUI("mate")
-    Integer mate;
+    private Integer mate;
 
     /**
      * If true -> Score is just a lowerbound
      * Usually false
      */
     @EngineToGUI("lowerbound")
-    boolean lowerbound;
+    private boolean lowerbound;
 
     /**
      * If true -> Score is just an upperbound
      * Usually false
      */
     @EngineToGUI("upperbound")
-    boolean upperbound;
+    private boolean upperbound;
 
     @Override
     public String toString() {

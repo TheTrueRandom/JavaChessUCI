@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import output.*;
 
@@ -47,6 +48,7 @@ public class EngineToGUITest {
     }
 
     @Test
+    @Disabled
     void reflectionPerformance() {
         OutputFactory.generateUCIOutput("bestmove"); //init reflections
         long start = System.nanoTime();

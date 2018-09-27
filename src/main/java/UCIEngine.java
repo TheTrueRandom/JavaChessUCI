@@ -25,8 +25,8 @@ public class UCIEngine implements Runnable, IUCIEngine {
 
     private String executablePath;
     private Process process;
-    private PrintWriter output;
-    private BufferedReader input;
+    private PrintWriter processOutput;
+    private BufferedReader processInput;
     private State state;
     private CountDownLatch startLatch;
     private CountDownLatch isReadyLatch;
@@ -71,13 +71,13 @@ public class UCIEngine implements Runnable, IUCIEngine {
         String read;
         CalculationResult calculationResult = new CalculationResult();
         try {
-            while (state != State.INITIAL && (read = input.readLine()) != null) {
-                if (read.equals("uciok")) {
+            while (state != State.INITIAL && (read = processInput.readLine()) != null) {
+                if ("uciok".equals(read)) {
                     startLatch.countDown();
                     continue;
                 }
 
-                if (read.equals("readyok")) {
+                if ("readyok".equals(read)) {
                     isReadyLatch.countDown();
                     continue;
                 }
@@ -159,8 +159,8 @@ public class UCIEngine implements Runnable, IUCIEngine {
         Thread t = new Thread(() -> {
             try {
                 process = Runtime.getRuntime().exec(executablePath);
-                input = new BufferedReader(new InputStreamReader(process.getInputStream()));
-                output = new PrintWriter(process.getOutputStream(), true);
+                processInput = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                processOutput = new PrintWriter(process.getOutputStream(), true);
                 ThreadFactory threadFactory = r -> {
                     Thread t1 = Executors.defaultThreadFactory().newThread(r);
                     t1.setDaemon(true);
@@ -315,8 +315,8 @@ public class UCIEngine implements Runnable, IUCIEngine {
 
         process.destroy();
         process = null;
-        input = null;
-        output = null;
+        processInput = null;
+        processOutput = null;
         state = State.INITIAL;
     }
 
@@ -361,13 +361,13 @@ public class UCIEngine implements Runnable, IUCIEngine {
     }
 
     private synchronized void sendCommand(String command) {
-        if (output == null) {
+        if (processOutput == null) {
             log.warn("attempt to send command on destroyed process (" + command + ")");
             return;
         }
 
         log.info("executing command '{}'", command);
-        output.println(command);
+        processOutput.println(command);
     }
 
     private void checkStarted() {

@@ -26,19 +26,19 @@ class EngineTest {
     private UCIEngine engine;
 
     @BeforeAll
-    static void init() {
+    private static void init() {
         EXECUTABLE = EngineTest.class.getResource("stockfish_8_x64").getFile();
         new File(EXECUTABLE).setExecutable(true);
     }
 
     @BeforeEach
-    void setUp() throws JuciException, IOException {
+    private void setUp() throws JuciException, IOException {
         engine = new UCIEngine(EXECUTABLE);
         engine.start();
     }
 
     @AfterEach
-    void tearDown() {
+    private void tearDown() {
         engine.shutdown();
     }
 
@@ -98,6 +98,7 @@ class EngineTest {
         engine.shutdown();
         engine.start();
         engine.isReady();
+        assertThat(engine.getAuthor(), notNullValue());
     }
 
     @Test
@@ -147,6 +148,8 @@ class EngineTest {
         CalculationResult calculationResult = engine.goMovetimeAsync(100).get();
 
         assertThat(calculationResult.getBestmove(), is("a2a1"));
+        assertThat(calculationResult.getBestmovePv(1), is("a2a1"));
+        assertThat(calculationResult.getPonder(), nullValue());
         assertThat(calculationResult.getLastScoreInfo().getScore().getMate(), is(1));
         assertThat(infos.get(infos.size() - 1).getScore().getMate(), is(1));
     }

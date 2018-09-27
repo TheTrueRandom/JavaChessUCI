@@ -9,19 +9,19 @@ import lombok.Getter;
 public class Option extends UCIOutput {
 
     @EngineToGUI("name")
-    String name;
+    private String name;
 
     @EngineToGUI("type")
-    String type;
+    private String type;
 
     @EngineToGUI("default")
-    String defaultValue;
+    private String defaultValue;
 
     @EngineToGUI("min")
-    String minValue;
+    private String minValue;
 
     @EngineToGUI("max")
-    String maxValue;
+    private String maxValue;
 
     public Option(String data) {
         super(data);

@@ -9,10 +9,10 @@ import lombok.Getter;
 public class Id extends UCIOutput {
 
     @EngineToGUI("name")
-    String name;
+    private String name;
 
     @EngineToGUI("author")
-    String author;
+    private String author;
 
     public Id(String data) {
         super(data);

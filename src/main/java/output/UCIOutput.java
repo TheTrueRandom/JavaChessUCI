@@ -11,7 +11,7 @@ import java.util.*;
 @Data
 @Slf4j
 public class UCIOutput {
-    String data;
+    private String data;
 
     static {
         System.out.println();
@@ -84,6 +84,8 @@ public class UCIOutput {
                 continue;
             }
 
+            field.setAccessible(true);
+
             EngineToGUI fieldClassAnnotation = field.getType().getAnnotation(EngineToGUI.class);
             if (fieldClassAnnotation == null) {
                 ReflectionBuffer reflectionBuffer = new ReflectionBuffer();
@@ -107,7 +109,7 @@ public class UCIOutput {
         return fields;
     }
 
-    LinkedList<String> getTokens() {
+    private LinkedList<String> getTokens() {
         return new LinkedList<>(Arrays.asList(data.split("\\s")));
     }
 

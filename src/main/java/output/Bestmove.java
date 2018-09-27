@@ -11,10 +11,10 @@ import lombok.ToString;
 public class Bestmove extends UCIOutput {
 
     @EngineToGUI("bestmove")
-    String bestmove;
+    private String bestmove;
 
     @EngineToGUI("ponder")
-    String ponder;
+    private String ponder;
 
     public Bestmove(String data) {
         super(data);

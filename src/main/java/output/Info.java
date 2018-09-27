@@ -13,52 +13,52 @@ import java.util.List;
 public class Info extends UCIOutput {
 
     @EngineToGUI("depth")
-    Integer depth;
+    private Integer depth;
 
     @EngineToGUI("seldepth")
-    Integer seldepth;
+    private Integer seldepth;
 
     @EngineToGUI("time")
-    Integer time;
+    private Integer time;
 
     @EngineToGUI("nodes")
-    Integer nodes;
+    private Integer nodes;
 
     @EngineToGUI("pv")
-    List<String> pv;
+    private List<String> pv;
 
     @EngineToGUI("multipv")
-    Integer multipv;
+    private Integer multipv;
 
     @EngineToGUI("score")
-    Score score;
+    private Score score;
 
     @EngineToGUI("currmove")
-    String currmove;
+    private String currmove;
 
     @EngineToGUI("currmovenumber")
-    Integer currmovenumber;
+    private Integer currmovenumber;
 
     @EngineToGUI("hashfull")
-    Integer hashfull;
+    private Integer hashfull;
 
     @EngineToGUI("nps")
-    Integer nps;
+    private Integer nps;
 
     @EngineToGUI("tbhits")
-    Integer tbhits;
+    private Integer tbhits;
 
     @EngineToGUI("sbhits")
-    Integer sbhits;
+    private Integer sbhits;
 
     @EngineToGUI("string")
-    String string;
+    private String string;
 
     @EngineToGUI("refutation")
-    List<String> refutation;
+    private List<String> refutation;
 
     @EngineToGUI("currline")
-    List<String> currline; // TODO: 09.09.18 cpunumber
+    private List<String> currline; // TODO: 09.09.18 cpunumber
 
     public Info(String data) {
         super(data);
