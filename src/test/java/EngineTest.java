@@ -26,19 +26,19 @@ class EngineTest {
     private UCIEngine engine;
 
     @BeforeAll
-    private static void init() {
+    static void init() {
         EXECUTABLE = EngineTest.class.getResource("stockfish_8_x64").getFile();
         new File(EXECUTABLE).setExecutable(true);
     }
 
     @BeforeEach
-    private void setUp() throws JuciException, IOException {
+    void setUp() throws JuciException, IOException {
         engine = new UCIEngine(EXECUTABLE);
         engine.start();
     }
 
     @AfterEach
-    private void tearDown() {
+    void tearDown() {
         engine.shutdown();
     }
 
